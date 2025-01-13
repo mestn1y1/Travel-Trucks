@@ -1,8 +1,4 @@
 :root {
-  margin: 0 auto;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-
   --main-color: #475467;
   --main-white: #ffffff;
   --main-black: #101828
@@ -13,6 +9,13 @@
   --background-features: #f2f4f7;
   --background-inputs: #f7f7f7;
   --animation: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+   margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 h1,
