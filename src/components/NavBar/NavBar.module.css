@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 28px 64px;
+}
+
+.logoLink {
+  position: absolute;
+  left: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 92px;
+}
+
+.link {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: var(--main-darkBlue);
+}
+
+.isActive {
+  color: var(--accent-second-color);
+}
