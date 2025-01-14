@@ -1,0 +1,12 @@
+.link {
+  display: block;
+  width: 173px;
+}
+.previewImg {
+  width: 292px;
+  height: 320px;
+  background-color: var(--background-features);
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+}

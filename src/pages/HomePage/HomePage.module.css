@@ -33,3 +33,8 @@
   color: var(--inputs);
   margin-bottom: 40px;
 }
+
+.link {
+  display: block;
+  width: 173px;
+}

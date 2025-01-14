@@ -10,3 +10,7 @@
   color: var(--main-white);
   border: none;
 }
+
+.btn:hover {
+  background-color: var(--accent-second-color);
+}
