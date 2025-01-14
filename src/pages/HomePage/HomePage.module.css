@@ -1,6 +1,6 @@
 .hero {
   display: flex;
-  height: 100vh;
+  height: 91.7vh;
   background: url(/heroImage.jpg);
   background-size: cover;
   background-repeat: no-repeat;
