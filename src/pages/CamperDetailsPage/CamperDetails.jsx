@@ -19,11 +19,11 @@ const getClassName = (props) => {
 export default function CamperDetailsPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const currentCamper = useSelector(selectCurrentCamper);
   const loading = useSelector(selectIsLoading);
   useEffect(() => {
     dispatch(fetchCamperById(id));
   }, [id, dispatch]);
+  const currentCamper = useSelector(selectCurrentCamper);
   console.log(currentCamper);
   return (
     <div className={css.wrapper}>
