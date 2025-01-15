@@ -1,0 +1,91 @@
+.wrapper {
+  margin: 0 auto;
+  width: 1312px;
+  margin-top: 48px;
+}
+
+.ratingInfo {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.iconsStar {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+.camperRating {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  display: flex;
+  align-items: center;
+}
+.camperLocation {
+  display: flex;
+  align-items: center;
+}
+
+.currentCamperText {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+}
+
+.currentCamperGallery {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 28px;
+  margin-top: 28px;
+}
+.galleryItem {
+  width: calc(100% - 48px * 3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.currentCamperDescription {
+  color: #475467;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 60px;
+}
+
+.currentCamperDetails {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.horizontLine {
+  border-top: 2px solid #dadde1;
+}
+
+.link {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.link.active::after {
+  background-color: #e44848;
+}
+
+.link:hover::after {
+  background-color: #e29898;
+}
