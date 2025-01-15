@@ -19,7 +19,6 @@ export const fetchCamperById = createAsyncThunk(
   "campers/fetchById",
   async (id, thunkApi) => {
     try {
-      console.log("Запрос с ID:", id); // Логируем ID
       const { data } = await axios.get(`/campers/${id}`);
       return data;
     } catch (error) {
