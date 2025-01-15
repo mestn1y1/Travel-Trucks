@@ -31,6 +31,7 @@ const campersSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchCamperById.fulfilled, (state, action) => {
+        console.log("Ответ от API:", action.payload);
         state.loading = false;
         state.currentCamper = action.payload;
       })
