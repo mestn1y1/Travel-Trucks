@@ -7,7 +7,7 @@ import {
   selectIsLoading,
 } from "../../redux/campers/selectors.js";
 import { fetchCampers } from "../../redux/campers/operations.js";
-import css from "./CatalogPage.module.css"
+import css from "./CatalogPage.module.css";
 
 export default function CatalogPage() {
   const campers = useSelector(selectCampers);
@@ -18,7 +18,6 @@ export default function CatalogPage() {
   }, [dispatch]);
   return (
     <section className={css.catalogSection}>
-      <h2>CatalogPage</h2>
       <Filter />
       {loading && <p>Loading</p>}
       <CampersList campers={campers.items} />

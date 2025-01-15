@@ -5,7 +5,7 @@ export default function CampersList({ campers = [] }) {
   return (
     <ul className={css.campersList}>
       {campers.map((camper) => (
-        <li key={camper.id}>
+        <li key={camper.id} className={css.camperItem}>
           <CamperItem camper={camper} />
         </li>
       ))}

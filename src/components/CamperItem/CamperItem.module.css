@@ -7,6 +7,48 @@
   height: 320px;
   background-color: var(--background-features);
   object-fit: cover;
+  flex-shrink: 0;
   overflow: hidden;
   border-radius: 10px;
+}
+
+.wrapper {
+  width: 520px;
+}
+.camperHeader {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.camperHeaderText {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+}
+
+.camperHeaderBtn {
+  justify-self: flex-end;
+}
+.camperSubHeader {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.camperRating {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.camperDescription {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #475467;
+  font-size: 16px;
+  line-height: 24px;
 }
