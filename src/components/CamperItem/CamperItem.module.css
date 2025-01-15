@@ -12,6 +12,12 @@
   border-radius: 10px;
 }
 
+.iconsStar {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
 .wrapper {
   width: 520px;
 }
@@ -42,6 +48,13 @@
   line-height: 150%;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+  display: flex;
+  align-items: center;
+}
+
+.camperLocation {
+  display: flex;
+  align-items: center;
 }
 
 .camperDescription {

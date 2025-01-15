@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import css from "./CamperItem.module.css";
+import { Icon } from "../Icon/Icon";
 
 export default function CamperItem({ camper }) {
   console.log(camper);
@@ -19,10 +20,14 @@ export default function CamperItem({ camper }) {
         </div>
         <div className={css.camperSubHeader}>
           <p className={css.camperRating}>
+            <Icon iconName="star-pressed" className={css.iconsStar} />
             {camper.rating}
             <span>({camper.reviews.length} Reviews)</span>
           </p>
-          <p className={css.camperLocation}>{camper.location}</p>
+          <p className={css.camperLocation}>
+            <Icon iconName="map" className={css.iconsStar} />
+            {camper.location}
+          </p>
         </div>
         <p className={css.camperDescription}>{camper.description}</p>
         <Link to={`/catalog/${camper.id}`} className={css.link}>
