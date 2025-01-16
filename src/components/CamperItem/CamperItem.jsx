@@ -20,7 +20,7 @@ export default function CamperItem({ camper }) {
         </div>
         <div className={css.camperSubHeader}>
           <p className={css.camperRating}>
-            <Icon iconName="star-pressed" className={css.iconsStar} />
+            <Icon iconName="star" className={css.iconsStar} />
             {camper.rating}
             <span>({camper.reviews.length} Reviews)</span>
           </p>

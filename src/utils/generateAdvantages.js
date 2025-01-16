@@ -20,12 +20,12 @@ export const generateAdvantages = (camper) => {
     },
     {
       label: "Air Conditioning",
-      value: AC && "AC", // Оставляем только метку без "Yes"
+      value: AC && "AC",
       iconName: "wind",
     },
     {
       label: "Kitchen",
-      value: kitchen && "Kitchen", // Оставляем только метку
+      value: kitchen && "Kitchen",
       iconName: "cup",
     },
     {
@@ -58,5 +58,5 @@ export const generateAdvantages = (camper) => {
       value: TV && "TV",
       iconName: "tv",
     },
-  ].filter((item) => item.value); // Убираем элементы с пустыми значениями
+  ].filter((item) => item.value);
 };

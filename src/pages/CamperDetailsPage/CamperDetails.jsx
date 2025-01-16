@@ -37,7 +37,7 @@ export default function CamperDetailsPage() {
           <h2 className={css.currentCamperText}>{currentCamper.name}</h2>
           <div className={css.ratingInfo}>
             <p className={css.camperRating}>
-              <Icon iconName="star-pressed" className={css.iconsStar} />
+              <Icon iconName="star" className={css.iconsStar} />
               {currentCamper.rating}
               <span>({currentCamper.reviews.length} Reviews)</span>
             </p>

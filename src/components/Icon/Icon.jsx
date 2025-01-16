@@ -1,4 +1,4 @@
-import icons from "/icons.svg";
+import icons from "/symbol-defs.svg";
 
 export const Icon = ({ iconName, className }) => {
   return (
