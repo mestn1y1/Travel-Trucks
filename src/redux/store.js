@@ -20,15 +20,9 @@ const favoritesPersistConfig = {
   whitelist: ["favorites"],
 };
 
-const campersPersistConfig = {
-  key: "campers",
-  storage,
-  whitelist: ["currentCamper"],
-};
-
 export const store = configureStore({
   reducer: {
-    campers: persistReducer(campersPersistConfig, campersReducer),
+    campers: campersReducer,
     filter: filterReducer,
     favorites: persistReducer(favoritesPersistConfig, favoritesReducer),
   },

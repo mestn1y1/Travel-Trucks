@@ -8,9 +8,11 @@ import {
   selectCurrentCamper,
   selectIsLoading,
 } from "../../redux/campers/selectors";
+import { clearCurrentCamper } from "../../redux/campers/slice";
 import { Icon } from "../../components/Icon/Icon";
 import clsx from "clsx";
 import css from "./CamperDetails.module.css";
+import Loader from "../../components/Loader/Loader";
 
 const getClassName = (props) => {
   return clsx(css.link, props.isActive && css.active);
@@ -21,12 +23,15 @@ export default function CamperDetailsPage() {
   const dispatch = useDispatch();
   const loading = useSelector(selectIsLoading);
   const currentCamper = useSelector(selectCurrentCamper);
+
   useEffect(() => {
+    dispatch(clearCurrentCamper());
     dispatch(fetchCamperById(id));
   }, [id, dispatch]);
 
   return (
     <div className={css.wrapper}>
+      {loading && <Loader />}
       {currentCamper ? (
         <>
           <h2 className={css.currentCamperText}>{currentCamper.name}</h2>
@@ -75,7 +80,7 @@ export default function CamperDetailsPage() {
           </ul>
         </>
       ) : (
-        <p className={css.errorText}>Camper details could not be loaded.</p>
+        <Loader />
       )}
       <hr className={css.horizontLine} />
       <Outlet />
