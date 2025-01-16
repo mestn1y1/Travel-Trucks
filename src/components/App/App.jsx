@@ -9,21 +9,24 @@ const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage"));
 const CamperDetailsPage = lazy(() =>
   import("../../pages/CamperDetailsPage/CamperDetails")
 );
-const NotFoundPage = lazy(() => import("../../pages/NotFounPage/NotFoundPage"));
-import { useState } from "react";
-export default function App() {
-  const [count, setCount] = useState(0);
+const FavoritesPage = lazy(() =>
+  import("../../pages/FavoritesPage/FavoritesPage")
+);
+const NotFoundPage = lazy(() =>
+  import("../../pages/NotFoundPage/NotFoundPage")
+);
 
+export default function App() {
   return (
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog" element={<CatalogPage />} />
-        <Route path="/catalog/:id" element={<CamperDetailsPage />}>
-          <Route path="features" element={<Features />} />
-          <Route path="reviews" element={<Reviews />} />
-        </Route>
+        <Route path="/catalog/:id" element={<CamperDetailsPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="features" element={<Features />} />
+        <Route path="reviews" element={<Reviews />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>

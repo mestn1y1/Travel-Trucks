@@ -23,6 +23,11 @@ export default function NavBar() {
             Catalog
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/favorites" className={getClassName}>
+            Favorites
+          </NavLink>
+        </li>
       </ul>
     </header>
   );

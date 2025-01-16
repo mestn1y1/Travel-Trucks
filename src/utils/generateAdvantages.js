@@ -10,6 +10,7 @@ export const generateAdvantages = (camper) => {
     microwave = false,
     gas = false,
     water = false,
+    radio = false, // Добавляем радио
   } = camper;
 
   return [
@@ -57,6 +58,11 @@ export const generateAdvantages = (camper) => {
       label: "TV",
       value: TV && "TV",
       iconName: "tv",
+    },
+    {
+      label: "Radio",
+      value: radio && "Radio",
+      iconName: "radio",
     },
   ].filter((item) => item.value);
 };

@@ -6,10 +6,16 @@
   height: 100%;
   display: flex;
   gap: 24px;
+  margin: 0 auto;
 }
 
 .campersList {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+.favoritesText {
+  margin: 0 auto;
+  margin-top: 100px;
 }

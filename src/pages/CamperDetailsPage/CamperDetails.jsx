@@ -9,6 +9,7 @@ import {
   selectIsLoading,
 } from "../../redux/campers/selectors";
 import { clearCurrentCamper } from "../../redux/campers/slice";
+
 import { Icon } from "../../components/Icon/Icon";
 import clsx from "clsx";
 import css from "./CamperDetails.module.css";

@@ -27,15 +27,30 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
+  position: relative;
 }
 .camperHeaderText {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  max-width: 390px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.camperHeaderPrice {
   font-weight: 600;
   font-size: 24px;
   line-height: 133%;
 }
 
 .camperHeaderBtn {
-  justify-self: flex-end;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 2px;
+  right: -56px;
 }
 .camperSubHeader {
   display: flex;
@@ -64,4 +79,41 @@
   color: #475467;
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.iconAdvantages {
+  width: 20px;
+  height: 20px;
+}
+
+.advantagesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 430px;
+}
+
+.advantagesItem {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 12px 18px;
+  background-color: #f2f4f7;
+  font-weight: 500;
+  font-size: 16px;
+  color: #101828;
+  height: auto;
+}
+
+.camperHeaderBtn {
+}
+.heartIcon {
+  width: 24px;
+  height: 24px;
 }
