@@ -1,3 +1,10 @@
+import { Formik, Form } from "formik";
+import DatePicker from "react-datepicker";
+
 export default function BookingForm() {
-  return <div></div>;
+  return (
+    <Formik>
+      <Form></Form>
+    </Formik>
+  );
 }

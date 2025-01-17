@@ -1,3 +1,6 @@
+.wrapper {
+  padding: 44px 64px;
+}
 .camperItem {
   border: 1px solid #dadde1;
   border-radius: 20px;

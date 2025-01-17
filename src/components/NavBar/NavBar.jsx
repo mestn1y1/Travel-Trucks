@@ -8,7 +8,7 @@ const getClassName = (props) => {
 
 export default function NavBar() {
   return (
-    <header>
+    <header className={css.header}>
       <Link to="/" className={css.logoLink}>
         <img src={logo} alt="logo" className={css.logo} />
       </Link>

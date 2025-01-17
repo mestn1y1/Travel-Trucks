@@ -1,5 +1,5 @@
 .catalogSection {
-  padding-left: 64px;
+  padding: 44px 64px;
   display: flex;
   justify-content: space-evenly;
 }

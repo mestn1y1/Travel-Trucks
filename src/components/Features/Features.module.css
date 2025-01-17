@@ -3,8 +3,7 @@
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
-  margin-bottom: 44px;
-  width: 430px;
+  margin-bottom: 48px;
 }
 
 .advantagesItem {
@@ -15,7 +14,7 @@
   justify-content: center;
   border-radius: 100px;
   padding: 12px 18px;
-  background-color: #f2f4f7;
+  background-color: #e4e5e7;
   font-weight: 500;
   font-size: 16px;
   color: #101828;
@@ -24,4 +23,46 @@
 .iconAdvantages {
   width: 20px;
   height: 20px;
+}
+
+.wrapper {
+  background-color: var(--inputs);
+  border-radius: 10px;
+  padding: 44px 52px;
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main-darkBlue);
+  margin-bottom: 24px;
+}
+.horizontLine {
+  width: 100%;
+  border-top: 2px solid #dadde1;
+  margin-bottom: 24px;
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detailsItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detailText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main-darkBlue);
 }

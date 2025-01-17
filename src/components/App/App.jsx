@@ -8,7 +8,7 @@ const NavBar = lazy(() => import("../NavBar/NavBar"));
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage"));
 const CamperDetailsPage = lazy(() =>
-  import("../../pages/CamperDetailsPage/CamperDetails")
+  import("../../pages/CamperDetailsPage/CamperDetailsPage")
 );
 const FavoritesPage = lazy(() =>
   import("../../pages/FavoritesPage/FavoritesPage")
@@ -24,10 +24,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog" element={<CatalogPage />} />
-        <Route path="/catalog/:id" element={<CamperDetailsPage />} />
+        <Route path="/catalog/:id" element={<CamperDetailsPage />}>
+          <Route path="features" element={<Features />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Route>
         <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="features" element={<Features />} />
-        <Route path="reviews" element={<Reviews />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>

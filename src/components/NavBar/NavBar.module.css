@@ -1,9 +1,10 @@
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   padding: 28px 64px;
+  background-color: var(--inputs);
 }
 
 .logoLink {
