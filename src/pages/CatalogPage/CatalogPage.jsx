@@ -5,23 +5,35 @@ import CampersList from "../../components/CampersList/CampersList";
 import {
   selectCampers,
   selectIsLoading,
+  selectCurrentPage,
 } from "../../redux/campers/selectors.js";
 import { fetchCampers } from "../../redux/campers/operations.js";
+import { setCurrentPage } from "../../redux/campers/slice.js";
 import css from "./CatalogPage.module.css";
 import Loader from "../../components/Loader/Loader.jsx";
 
 export default function CatalogPage() {
-  const campers = useSelector(selectCampers);
   const dispatch = useDispatch();
+  const campers = useSelector(selectCampers);
   const loading = useSelector(selectIsLoading);
+
+  const currentPage = useSelector(selectCurrentPage);
+
   useEffect(() => {
-    dispatch(fetchCampers());
+    dispatch(fetchCampers({ page: 1, perPage: 4 }));
   }, [dispatch]);
+
+  const handleLoadMore = () => {
+    const nextPage = currentPage + 1;
+    dispatch(setCurrentPage(nextPage));
+    dispatch(fetchCampers({ page: nextPage, perPage: 4 }));
+  };
+
   return (
     <section className={css.catalogSection}>
       {loading && <Loader />}
       <Filter />
-      <CampersList campers={campers.items} />
+      <CampersList campers={campers} onclick={handleLoadMore} />
     </section>
   );
 }
