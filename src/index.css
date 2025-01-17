@@ -8,6 +8,7 @@
   --add-color: #ffc531;
   --background-features: #f2f4f7;
   --inputs: #f7f7f7;
+  --formColor: #6C717B;
 }
 
 body {
@@ -55,3 +56,8 @@ button {
 input {
   font-family: inherit;
 }
+
+
+
+/* ---====Date Picker */
+

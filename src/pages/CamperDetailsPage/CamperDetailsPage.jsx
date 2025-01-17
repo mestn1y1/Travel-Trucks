@@ -14,6 +14,7 @@ import { Icon } from "../../components/Icon/Icon";
 import clsx from "clsx";
 import css from "./CamperDetails.module.css";
 import Loader from "../../components/Loader/Loader";
+import BookingForm from "../../components/BookingForm/BookingForm";
 
 const getClassName = (props) => {
   return clsx(css.link, props.isActive && css.active);
@@ -34,7 +35,7 @@ export default function CamperDetailsPage() {
     <div className={css.wrapper}>
       {loading && <Loader />}
       {currentCamper ? (
-        <>
+        <div className={css.content}>
           <h2 className={css.currentCamperText}>{currentCamper.name}</h2>
           <div className={css.ratingInfo}>
             <p className={css.camperRating}>
@@ -50,7 +51,6 @@ export default function CamperDetailsPage() {
           <p className={css.currentCamperText}>
             €{currentCamper.price.toFixed(2)}
           </p>
-
           <ul className={css.currentCamperGallery}>
             {currentCamper.gallery.map((item, index) => (
               <li key={index} className={css.galleryItem}>
@@ -79,12 +79,19 @@ export default function CamperDetailsPage() {
               </NavLink>
             </li>
           </ul>
-        </>
+          <hr className={css.horizontLine} />
+          <div className={css.wrapperBottom}>
+            <div className={css.outlet}>
+              <Outlet />
+            </div>
+            <div className={css.formWrapper}>
+              <BookingForm />
+            </div>
+          </div>
+        </div>
       ) : (
         <Loader />
       )}
-      <hr className={css.horizontLine} />
-      <Outlet />
     </div>
   );
 }

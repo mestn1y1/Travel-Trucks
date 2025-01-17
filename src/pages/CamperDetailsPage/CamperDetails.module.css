@@ -4,6 +4,11 @@
   width: 1312px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
 .ratingInfo {
   display: flex;
   gap: 16px;
@@ -57,11 +62,8 @@
   display: flex;
   gap: 40px;
   margin-bottom: 24px;
-}
-
-.horizontLine {
-  border-top: 2px solid #dadde1;
-  margin-bottom: 44px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #dadde1;
 }
 
 .link {
@@ -89,4 +91,14 @@
 
 .link:hover::after {
   background-color: #e29898;
+}
+
+.wrapperBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formWrapper {
+  justify-self: flex-end;
+  align-self: center;
 }
