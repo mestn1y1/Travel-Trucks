@@ -7,7 +7,6 @@ import css from "./Features.module.css";
 
 export default function Features() {
   const currentCamper = useSelector(selectCurrentCamper);
-  console.log(currentCamper);
   if (!currentCamper) {
     return <p>Camper details are not available.</p>;
   }

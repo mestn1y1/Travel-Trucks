@@ -1,6 +1,6 @@
 import { Outlet, NavLink } from "react-router-dom";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 import { fetchCamperById } from "../../redux/campers/operations";
 import { useDispatch, useSelector } from "react-redux";
