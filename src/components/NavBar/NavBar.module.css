@@ -30,3 +30,7 @@
 .isActive {
   color: var(--accent-second-color);
 }
+
+.link:hover {
+  color: var(--accent-second-color);
+}

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import Button from "../Button/Button";
-import { generateAdvantages } from "../../utils/generateAdvantages";
+import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
+import Button from "../Button/Button";
 import { addFavorite, removeFavorite } from "../../redux/favorites/slice";
+import { generateAdvantages } from "../../utils/generateAdvantages";
 
 import { Icon } from "../Icon/Icon";
 import { selectFavorites } from "../../redux/favorites/selectors";
@@ -17,8 +18,14 @@ export default function CamperItem({ camper }) {
   const toggleFavorite = () => {
     if (isFavorite) {
       dispatch(removeFavorite(camper.id));
+      toast.error(`${camper.name} removed from favorites!`, {
+        autoClose: 2000,
+      });
     } else {
       dispatch(addFavorite(camper));
+      toast.success(`${camper.name} added to favorites!`, {
+        autoClose: 2000,
+      });
     }
   };
   return (
