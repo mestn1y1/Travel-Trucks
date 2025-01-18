@@ -2,9 +2,5 @@
   padding: 44px 64px;
   display: flex;
   justify-content: space-evenly;
-  position: relative;
-}
-.loadMoreBtn {
-  position: absolute;
-  bottom: 0;
+  margin: 0 auto;
 }

@@ -1,5 +1,8 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Loader from "../Loader/Loader";
 
 const Features = lazy(() => import("../../components/Features/Features"));
@@ -32,6 +35,7 @@ export default function App() {
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <ToastContainer />
     </Suspense>
   );
 }

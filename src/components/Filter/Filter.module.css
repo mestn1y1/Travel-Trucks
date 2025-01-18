@@ -1,0 +1,163 @@
+.filterForm {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex-shrink: 0;
+}
+
+.labelInput {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wrapperInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+}
+
+.locationTitle {
+  font-weight: 400;
+  font-size: 16px;
+  color: #6c717b;
+}
+
+.locationInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 16px;
+}
+
+.iconMap {
+  margin-right: 8px;
+  margin-top: 4px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 260px; /* Ограничение высоты */
+  overflow: hidden; /* Скролл, если много городов */
+  background-color: var(--background-features);
+
+  border-radius: 12px;
+  z-index: 10; /* Поверх других элементов */
+}
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background-color: #f0f0f0; /* Изменение фона при наведении */
+}
+.locationInput::placeholder {
+  color: #6c717b;
+}
+.locationInput::selection {
+  background: none;
+  color: inherit;
+}
+.headerTitle {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--main-color);
+  margin-bottom: 32px;
+}
+
+.fieldTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.horizontLine {
+  border: none;
+  border: 1px solid var(--background-features);
+}
+
+.checkBoxFilters {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  column-gap: 8px;
+  margin-top: 24px;
+}
+.checkboxWrapper {
+  width: 112px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.filterBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid var(--background-features);
+  width: 112px;
+  height: 96px;
+  box-sizing: border-box;
+  text-align: center;
+  gap: 8px;
+}
+
+.filterBox p {
+  color: var(--main-darkBlue);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+.formTypelist {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.radio {
+  display: none;
+}
+
+.radio:checked + .filterBox {
+  border: 1px solid var(--accent-color);
+}
+.checkbox:checked + .filterBox {
+  border: 1px solid var(--accent-color);
+}
+
+.filterBox:hover {
+  border: 1px solid var(--accent-second-color);
+}
+
+.iconChekBox {
+  width: 32px;
+  height: 32px;
+  margin-top: 8px;
+}
+
+.errorStyle {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  color: #d9534f;
+  font-size: 12px;
+}
