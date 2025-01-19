@@ -15,7 +15,7 @@
 React, Redux Toolkit, React Router, JavaScript, HTML, CSS.
 
 Додаткові бібліотеки:
-@reduxjs/toolkit, redux, react-redux.
+@reduxjs/toolkit, redux, react-redux, react-router-dom, formik, yup, axios, react-toastify, redux-persist, react-spinners, react-datepicker, clsx, modern-normalize.
 
 API:
 Використання API для динамічного отримання даних про кемпери, таких як доступність, характеристики, відгуки тощо.
