@@ -15,27 +15,18 @@ import Loader from "../../components/Loader/Loader.jsx";
 
 export default function CatalogPage() {
   const dispatch = useDispatch();
-  const campers = useSelector(selectCampers);
   const filterCampers = useSelector(selectVisibleCampers);
   const loading = useSelector(selectIsLoading);
 
-  const currentPage = useSelector(selectCurrentPage);
-
   useEffect(() => {
-    dispatch(fetchCampers({ page: 1, perPage: 4 }));
+    dispatch(fetchCampers());
   }, [dispatch]);
-
-  const handleLoadMore = () => {
-    const nextPage = currentPage + 1;
-    dispatch(setCurrentPage(nextPage));
-    dispatch(fetchCampers({ page: nextPage, perPage: 4 }));
-  };
 
   return (
     <section className={css.catalogSection}>
       {loading && <Loader />}
       <Filter />
-      <CampersList campers={filterCampers} onclick={handleLoadMore} />
+      <CampersList campers={filterCampers} />
     </section>
   );
 }

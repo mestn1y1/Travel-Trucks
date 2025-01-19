@@ -37,3 +37,11 @@
 .loadMoreBtn:hover {
   border: 1px solid var(--accent-second-color);
 }
+
+.infoText {
+  font-size: 40px;
+  color: var(--main-color);
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+}

@@ -25,9 +25,14 @@ export const generateAdvantages = (camper) => {
       iconName: "wind",
     },
     {
-      label: "Kitchen",
-      value: kitchen && "Kitchen",
-      iconName: "cup",
+      label: "TV",
+      value: TV && "TV",
+      iconName: "tv",
+    },
+    {
+      label: "",
+      value: engine.charAt(0).toUpperCase() + engine.slice(1),
+      iconName: "petrol",
     },
     {
       label: "Bathroom",
@@ -35,14 +40,19 @@ export const generateAdvantages = (camper) => {
       iconName: "shower",
     },
     {
-      label: "Refrigerator",
-      value: refrigerator && "Refrigerator",
-      iconName: "fridge",
-    },
-    {
       label: "Gas",
       value: gas && "Gas",
       iconName: "gas",
+    },
+    {
+      label: "Kitchen",
+      value: kitchen && "Kitchen",
+      iconName: "cup",
+    },
+    {
+      label: "Refrigerator",
+      value: refrigerator && "Refrigerator",
+      iconName: "fridge",
     },
     {
       label: "Water",
@@ -53,11 +63,6 @@ export const generateAdvantages = (camper) => {
       label: "Microwave",
       value: microwave && "Microwave",
       iconName: "microwave",
-    },
-    {
-      label: "TV",
-      value: TV && "TV",
-      iconName: "tv",
     },
     {
       label: "Radio",
